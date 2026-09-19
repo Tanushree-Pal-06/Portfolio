@@ -56,7 +56,8 @@ function ProjectDetailPage() {
     <main>
       <section className="mx-auto max-w-7xl px-5 pb-16 pt-14 sm:px-8 md:pb-24 md:pt-20 lg:px-12">
         <div className="flex items-center gap-3 font-mono text-xs text-accent"><span className="h-px w-10 bg-accent"/>PROJECT {project.number}</div>
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.35fr_.65fr] lg:items-end"><div><p className="text-sm font-semibold uppercase text-primary">{project.subtitle}</p><h1 className="mt-4 font-display text-[clamp(3.5rem,8vw,7rem)] font-bold leading-[.9]">{project.title}<span className="text-accent">.</span></h1><p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">{project.description}</p></div><dl className="border border-border bg-border"><div className="bg-surface p-5"><dt className="font-mono text-[10px] uppercase text-muted-foreground">My role</dt><dd className="mt-2 text-sm font-semibold">{project.role}</dd></div></dl></div>
+        <div className="mt-10 grid gap-10 lg:grid-cols-[1.35fr_.65fr] lg:items-end"><div className="min-w-0">
+  <p className="text-sm font-semibold uppercase text-primary">{project.subtitle}</p><h1 className="mt-4 break-words font-display text-[clamp(3rem,14vw,7rem)] font-bold leading-[.9]">{project.title}<span className="text-accent">.</span></h1><p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground">{project.description}</p></div><dl className="border border-border bg-border"><div className="bg-surface p-5"><dt className="font-mono text-[10px] uppercase text-muted-foreground">My role</dt><dd className="mt-2 text-sm font-semibold">{project.role}</dd></div></dl></div>
         <a href="#overview" aria-label="Scroll to project overview" className="mt-14 inline-flex size-12 items-center justify-center border border-border text-primary transition hover:bg-secondary"><ArrowDown className="size-5"/></a>
       </section>
 
