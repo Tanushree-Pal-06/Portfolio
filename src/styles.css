@@ -1,0 +1,74 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --shadow-editorial: 18px 18px 0 -8px color-mix(in oklab, var(--accent) 52%, transparent);
+}
+
+:root {
+  --background: oklch(0.165 0.035 255);
+  --foreground: oklch(0.94 0.018 85);
+  --card: oklch(0.205 0.038 254);
+  --card-foreground: oklch(0.94 0.018 85);
+  --popover: oklch(0.205 0.038 254);
+  --popover-foreground: oklch(0.94 0.018 85);
+  --primary: oklch(0.76 0.105 291);
+  --primary-foreground: oklch(0.18 0.04 255);
+  --secondary: oklch(0.23 0.04 252);
+  --secondary-foreground: oklch(0.94 0.018 85);
+  --muted: oklch(0.25 0.03 252);
+  --muted-foreground: oklch(0.72 0.026 255);
+  --accent: oklch(0.78 0.105 42);
+  --accent-foreground: oklch(0.18 0.04 255);
+  --border: oklch(0.35 0.04 254);
+  --input: oklch(0.35 0.04 254);
+  --ring: oklch(0.76 0.105 291);
+  --surface: oklch(0.195 0.038 254);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { margin: 0; background: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); letter-spacing: 0; }
+  ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
+  button, a { outline-offset: 4px; }
+  button:focus-visible, a:focus-visible { outline: 2px solid var(--color-ring); }
+}
+
+@utility section-shell {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: 6rem 1.25rem;
+  @media (min-width: 40rem) { padding-inline: 2rem; }
+  @media (min-width: 64rem) { padding: 8rem 3rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  main > section { animation: enter .65s ease-out both; }
+}
