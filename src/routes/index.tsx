@@ -39,7 +39,7 @@ function PortfolioPage() {
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs text-muted-foreground"><span>CSE (AI & ML)</span><span className="text-accent">•</span><span>2023–2027</span><span className="inline-flex items-center gap-1.5"><MapPin className="size-3.5 text-accent"/>Indore, India</span></div>
           <div className="mt-9 flex flex-wrap gap-3"><a href="#projects" className="group inline-flex min-h-11 items-center gap-2 border border-primary bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90">View Projects <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5"/></a><a href="#contact" className="group inline-flex min-h-11 items-center gap-2 border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition hover:bg-secondary">Get In Touch <ArrowUpRight className="size-4"/></a></div>
         </div>
-        <div className="relative mx-auto w-full max-w-md px-5 pb-5 pt-3 lg:ml-auto">
+          <div className="relative mx-auto w-full max-w-md px-5 pb-5 pt-3 lg:ml-auto">
           <div className="absolute right-0 top-0 font-mono text-5xl text-primary/20">01</div><div className="absolute bottom-0 left-0 h-[72%] w-[76%] border border-accent/55" />
           <div className="relative aspect-[4/5] overflow-hidden border border-primary/60 bg-surface shadow-editorial">
             <img
